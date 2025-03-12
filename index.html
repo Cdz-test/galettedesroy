@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Galette des Rois - Tradition & Délices</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .playfair { font-family: 'Playfair Display', serif; }
+        .gradient-title {
+            background: linear-gradient(45deg, #0066ff, #ff69b4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #FFF8E7, #FFE4B5);
+        }
+        .card-hover {
+            transition: transform 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <meta name="description" content="Découvrez la galette des rois">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="bg-amber-50">
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold playfair text-amber-800">
+                    <i class="fas fa-crown mr-2"></i>La Galette des Rois
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="acceuil" class="text-amber-900 hover:text-amber-600 transition" id="page-link" data-page-id="67d072c7fa371d49d8e08796">Accueil</a>
+                    <a href="histoire" class="text-amber-900 hover:text-amber-600 transition" id="page-link" data-page-id="67b84acb64bbdc949869ba64">Histoire</a>
+                    <a href="recette" class="text-amber-900 hover:text-amber-600 transition" id="page-link" data-page-id="67d072d3fa371d49d8e0890a">Recette</a>
+                    <a href="#traditions" class="text-amber-900 hover:text-amber-600 transition">Traditions</a>
+                    <a href="#commander" class="text-amber-900 hover:text-amber-600 transition">Commander</a>
+                </div>
+                <button class="md:hidden text-amber-900">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="accueil" class="hero-bg relative overflow-hidden bg-gradient-to-b from-amber-50 to-white pt-10">
+    
+    <div class="container mx-auto px-6 py-32">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="text-center lg:text-left space-y-8 relative z-10">
+                <div class="inline-block rotate-3 bg-amber-100 px-6 py-2 rounded-lg mb-4">
+                    <span class="text-amber-800 font-semibold">Tradition &amp; Gourmandise &lt;3</span>
+                </div>
+                <h1 class="text-4xl lg:text-6xl xl:text-7xl font-bold mb-6 playfair leading-tight">
+                    <span class="block text-amber-800">La Magie de</span>
+                    <span class="gradient-title">l'Épiphanie</span>
+                </h1>
+                <p class="text-lg lg:text-xl text-gray-700 max-w-xl">
+                    Célébrez avec nous ce moment unique où la tradition rencontre la délicatesse. Une expérience gustative qui rassemble les familles dans la joie et la surprise.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
+                    <a href="#commander" class="group relative inline-flex items-center px-8 py-4 bg-amber-800 text-white rounded-full overflow-hidden shadow-xl transition transform hover:scale-105">
+                        <span class="relative z-10">Commander maintenant</span>
+                        <div class="absolute inset-0 bg-amber-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </a>
+                    <a href="#recette" class="group relative inline-flex items-center px-8 py-4 border-2 border-amber-800 text-amber-800 rounded-full overflow-hidden transition transform hover:scale-105">
+                        <span class="relative z-10 group-hover:text-white">Découvrir la recette</span>
+                        <div class="absolute inset-0 bg-amber-800 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="relative aspect-square">
+                    <img src="https://fakeimg.pl/800x800" alt="Galette des Rois" class="rounded-[30%] shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-500">
+                    <div class="absolute -top-12 -right-8 bg-amber-100 p-6 rounded-full shadow-xl animate-float">
+                        <i class="fas fa-crown text-5xl text-amber-600"></i>
+                    </div>
+                    <div class="absolute -bottom-10 -left-10 bg-white p-4 rounded-2xl shadow-lg animate-float-delay">
+                        <img src="https://fakeimg.pl/80x80" alt="Fève" class="w-20 h-20 object-cover rounded-xl">
+                    </div>
+                </div>
+                <div class="absolute -z-10 w-full h-full bg-amber-200 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+    <section id="histoire" class="py-24 bg-gradient-to-b from-amber-50 to-white relative overflow-hidden">
+    <div class="crown-pattern absolute inset-0 opacity-20"></div>
+    
+    <div class="container mx-auto px-6 relative">
+        <h2 class="text-4xl md:text-6xl font-bold mb-20 text-center playfair gradient-title">
+            Une Histoire Royale
+            <span class="block w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto mt-6"></span>
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="history-card group hover:transform hover:scale-105 transition-all duration-300">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://fakeimg.pl/400x300" alt="Les Origines" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-book text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 playfair text-amber-800">Les Origines</h3>
+                        <p class="text-amber-700">Une tradition qui remonte aux Saturnales romaines, où les rôles entre maîtres et esclaves s'inversaient.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-card group hover:transform hover:scale-105 transition-all duration-300">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://fakeimg.pl/400x300" alt="La Fève" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-crown text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 playfair text-amber-800">La Fève</h3>
+                        <p class="text-amber-700">Autrefois une fève naturelle, aujourd'hui une figurine collectionnée avec passion par les fabophiles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-card group hover:transform hover:scale-105 transition-all duration-300">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://fakeimg.pl/400x300" alt="L'Épiphanie" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-star text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 playfair text-amber-800">L'Épiphanie</h3>
+                        <p class="text-amber-700">Célébration des Rois mages venus offrir leurs présents à l'enfant Jésus, devenue une fête familiale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 relative">
+            <div class="bg-amber-900/10 backdrop-blur-sm rounded-3xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold playfair text-amber-800 mb-4">Une Tradition Millénaire</h3>
+                        <p class="text-amber-700 leading-relaxed mb-6">Plongez dans l'histoire fascinante de la galette des rois, une tradition qui traverse les époques et unit les familles autour d'un moment de partage unique.</p>
+                        <a href="#" class="inline-block px-6 py-3 bg-amber-600 text-white rounded-full hover:bg-amber-700 transition-colors duration-300">En savoir plus</a>
+                    </div>
+                    <div class="relative">
+                        <img src="https://fakeimg.pl/600x400" alt="Tradition de la galette" class="rounded-2xl shadow-xl w-full transform hover:scale-105 transition-transform duration-300">
+                        <div class="absolute -bottom-4 -right-4 bg-amber-100 rounded-full p-6 shadow-lg">
+                            <i class="fas fa-crown text-4xl text-amber-600"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .crown-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 30l-7.5-7.5L0 30l7.5 7.5L15 30zm30 0l-7.5-7.5L30 30l7.5 7.5L45 30zm15 0l-7.5-7.5L45 30l7.5 7.5L60 30z' fill='%23f59e0b' fill-opacity='0.1'/%3E%3C/svg%3E");
+        }
+        .history-card {
+            perspective: 1000px;
+        }
+        .history-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</section><section id="recette" class="py-24 bg-gradient-to-br from-amber-100 to-amber-300 overflow-hidden">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl md:text-6xl font-bold mb-16 text-center playfair gradient-title relative">
+            La Recette Traditionnelle
+            <div class="absolute w-24 h-24 bg-amber-200 rounded-full -z-10 blur-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            <div class="lg:col-span-1 space-y-8">
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-amber-100 rounded-full -mr-16 -mt-16 z-0"></div>
+                        <h3 class="text-3xl font-bold mb-8 playfair text-amber-800 relative z-10">Ingrédients</h3>
+                        <ul class="space-y-4 relative z-10">
+                            <li class="flex items-center bg-amber-50 p-3 rounded-xl">
+                                <span class="text-amber-600 mr-4 text-xl">✦</span>
+                                2 pâtes feuilletées
+                            </li>
+                            <li class="flex items-center bg-amber-50 p-3 rounded-xl">
+                                <span class="text-amber-600 mr-4 text-xl">✦</span>
+                                140g de poudre d'amandes
+                            </li>
+                            <li class="flex items-center bg-amber-50 p-3 rounded-xl">
+                                <span class="text-amber-600 mr-4 text-xl">✦</span>
+                                100g de sucre fin
+                            </li>
+                            <li class="flex items-center bg-amber-50 p-3 rounded-xl">
+                                <span class="text-amber-600 mr-4 text-xl">✦</span>
+                                2 œufs
+                            </li>
+                            <li class="flex items-center bg-amber-50 p-3 rounded-xl">
+                                <span class="text-amber-600 mr-4 text-xl">✦</span>
+                                75g de beurre mou
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-amber-100 rounded-full -mr-16 -mt-16 z-0"></div>
+                        <h3 class="text-3xl font-bold mb-8 playfair text-amber-800 relative z-10">Conseils</h3>
+                        <ul class="space-y-4 relative z-10">
+                            <li class="flex items-center bg-amber-50 p-3 rounded-xl">
+                                <span class="text-amber-600 mr-4 text-xl">✦</span>
+                                Sortez le beurre 1h avant
+                            </li>
+                            <li class="flex items-center bg-amber-50 p-3 rounded-xl">
+                                <span class="text-amber-600 mr-4 text-xl">✦</span>
+                                Utilisez des œufs à température ambiante
+                            </li>
+                            <li class="flex items-center bg-amber-50 p-3 rounded-xl">
+                                <span class="text-amber-600 mr-4 text-xl">✦</span>
+                                Soudez bien les bords de la galette
+                            </li>
+                            <li class="flex items-center bg-amber-50 p-3 rounded-xl">
+                                <span class="text-amber-600 mr-4 text-xl">✦</span>
+                                Laissez refroidir avant dégustation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl h-full">
+                        <div class="relative mb-6">
+                            <img src="https://fakeimg.pl/400x300" alt="Étape 1" class="rounded-2xl w-full h-48 object-cover">
+                            <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 playfair text-amber-800">Préparation de la Frangipane</h4>
+                        <p class="text-gray-600">Mélangez la poudre d'amandes avec le sucre, puis incorporez le beurre mou et les œufs jusqu'à obtention d'une pâte homogène.</p>
+                    </div>
+                </div>
+
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl h-full">
+                        <div class="relative mb-6">
+                            <img src="https://fakeimg.pl/400x300" alt="Étape 2" class="rounded-2xl w-full h-48 object-cover">
+                            <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-white font-bold">2</div>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 playfair text-amber-800">Assemblage</h4>
+                        <p class="text-gray-600">Étalez la première pâte, disposez la frangipane au centre, puis recouvrez de la seconde pâte. N'oubliez pas la fève !</p>
+                    </div>
+                </div>
+
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl h-full">
+                        <div class="relative mb-6">
+                            <img src="https://fakeimg.pl/400x300" alt="Étape 3" class="rounded-2xl w-full h-48 object-cover">
+                            <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-white font-bold">3</div>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 playfair text-amber-800">Dorure</h4>
+                        <p class="text-gray-600">Badigeonnez le dessus de jaune d'œuf et dessinez des motifs avec la pointe d'un couteau.</p>
+                    </div>
+                </div>
+
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl h-full">
+                        <div class="relative mb-6">
+                            <img src="https://fakeimg.pl/400x300" alt="Étape 4" class="rounded-2xl w-full h-48 object-cover">
+                            <div class="absolute -bottom-4 -right-4 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-white font-bold">4</div>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 playfair text-amber-800">Cuisson</h4>
+                        <p class="text-gray-600">Enfournez à 180°C pendant 30-35 minutes jusqu'à ce que la galette soit bien dorée.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="traditions" class="py-24 bg-gradient-to-b from-amber-50 to-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-64 bg-amber-100 opacity-30 transform -skew-y-6"></div>
+    <div class="container mx-auto px-6 relative">
+        <h2 class="text-4xl md:text-6xl font-bold mb-16 text-center playfair gradient-title">
+            Les Traditions
+            <span class="block text-lg mt-4 text-amber-600 font-normal">Un héritage gourmand</span>
+        </h2>
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div class="relative">
+                <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center space-x-6 mb-8">
+                        <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-users text-3xl text-amber-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold playfair text-amber-800">Le Plus Jeune</h3>
+                            <p class="text-amber-700">Une tradition qui enchante les plus petits</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Le benjamin de la famille se glisse sous la table, guidant la distribution des parts avec l'innocence et la magie de l'enfance.</p>
+                </div>
+            </div>
+            <div class="relative mt-8 lg:mt-0">
+                <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center space-x-6 mb-8">
+                        <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-crown text-3xl text-amber-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold playfair text-amber-800">La Couronne</h3>
+                            <p class="text-amber-700">Un moment royal en famille</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Porter la couronne dorée transforme chaque convive en roi ou reine d'un jour, créant des souvenirs impérissables.</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center space-x-6 mb-8">
+                        <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-gem text-3xl text-amber-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold playfair text-amber-800">La Fève</h3>
+                            <p class="text-amber-700">Le trésor qui couronne le destin</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Découvrir la fève cachée dans sa part est un moment de joie et d'excitation qui anime chaque dégustation.</p>
+                </div>
+            </div>
+            <div class="relative mt-8 lg:mt-0">
+                <div class="bg-white rounded-2xl shadow-xl p-8 transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center space-x-6 mb-8">
+                        <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-heart text-3xl text-amber-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold playfair text-amber-800">Le Partage</h3>
+                            <p class="text-amber-700">L'essence de la célébration</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">Un moment privilégié où les liens familiaux se resserrent autour d'une tradition gourmande et chaleureuse.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-0 right-0 w-full h-64 bg-amber-100 opacity-30 transform skew-y-6"></div>
+</section>
+
+    <section id="commander" class="py-24 bg-amber-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center playfair">
+                Commandez Votre Galette
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm card-hover">
+                    <h3 class="text-2xl font-bold mb-4 playfair">Classique</h3>
+                    <p class="text-xl mb-4">19.90€</p>
+                    <ul class="space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2"></i>4-6 personnes</li>
+                        <li><i class="fas fa-check mr-2"></i>Fève traditionnelle</li>
+                        <li><i class="fas fa-check mr-2"></i>Couronne dorée</li>
+                    </ul>
+                    <button class="w-full bg-white text-amber-800 py-3 rounded-full hover:bg-amber-100 transition">
+                        Commander
+                    </button>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm card-hover transform scale-105">
+                    <h3 class="text-2xl font-bold mb-4 playfair">Premium</h3>
+                    <p class="text-xl mb-4">29.90€</p>
+                    <ul class="space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2"></i>6-8 personnes</li>
+                        <li><i class="fas fa-check mr-2"></i>Fève collector</li>
+                        <li><i class="fas fa-check mr-2"></i>Couronne luxe</li>
+                        <li><i class="fas fa-check mr-2"></i>Livraison offerte</li>
+                    </ul>
+                    <button class="w-full bg-white text-amber-800 py-3 rounded-full hover:bg-amber-100 transition">
+                        Commander
+                    </button>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm card-hover">
+                    <h3 class="text-2xl font-bold mb-4 playfair">Familiale</h3>
+                    <p class="text-xl mb-4">39.90€</p>
+                    <ul class="space-y-2 mb-8">
+                        <li><i class="fas fa-check mr-2"></i>8-10 personnes</li>
+                        <li><i class="fas fa-check mr-2"></i>2 fèves collector</li>
+                        <li><i class="fas fa-check mr-2"></i>2 couronnes luxe</li>
+                        <li><i class="fas fa-check mr-2"></i>Livraison prioritaire</li>
+                    </ul>
+                    <button class="w-full bg-white text-amber-800 py-3 rounded-full hover:bg-amber-100 transition">
+                        Commander
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-amber-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4 playfair">Contact</h4>
+                    <p class="mb-2"><i class="fas fa-phone mr-2"></i>01 23 45 67 89</p>
+                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i>contact@galette.fr</p>
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>123 Rue de la Galette, Paris</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4 playfair">Horaires</h4>
+                    <p class="mb-2">Lun-Ven: 7h-19h</p>
+                    <p class="mb-2">Sam: 7h-20h</p>
+                    <p>Dim: 7h-13h</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4 playfair">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-facebook text-2xl"></i></a>
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-twitter text-2xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4 playfair">Newsletter</h4>
+                    <div class="flex">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-full text-amber-900 w-full">
+                        <button class="bg-amber-600 px-6 rounded-r-full hover:bg-amber-500 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-8 pt-8 text-center">
+                <p>© 2025 La Galette des Rois. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollReveal = document.querySelectorAll('.scroll-reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            scrollReveal.forEach(element => observer.observe(element));
+        });
+    </script>
+</body>
+</html>
